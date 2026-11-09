@@ -1,0 +1,20 @@
+Q.1:-What is a floating-point number, and why do we need it?
+A:- Floating point stores real numbers in the form of 1.0000×2ⁿ.
+It is very important because simple integers doesnot stores fraction.
+
+Q.2:-The 3 parts of 32 bits?
+A:- 1 sign bit (0 positive, 1 negative)
+8 exponent bits
+23 mantissa (fraction) bits
+
+Q.3:-Bias 127?
+A:- The exponent can be positive or negative  but in 8 exponent it stores 0 to 255 does not stores negative sign.
+ so by fixing this we have to add 127 in every exponrnt so the answer never be negative. 
+
+Q.4:-Normalising?
+A:- Normaziling is method in which the binary number shifts until the number becomes ex: 1.0000×2ⁿ.
+Because the number always 1 and also it gives 24 bit accuratley.
+
+Q.5:-Zero? 
+A:- Zero cannot store like 1 it is a special case and it is used in our project feature 4.
+Zero is stored with all the bits as 0 in expoent and mentissa bits as 0 so sign bit 0 give all 32 bits as 0000 

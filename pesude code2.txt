@@ -1,0 +1,14 @@
+-: Pseude code :-
+
+Steps :-
+1.Read the number from the input box.
+2.Check If it is not a number, show an error and stop.
+3.check If it is zero, show 32 zeros and stop processing further .
+4.Find the sign bit.If positve number than 0 if negative number 1 and also ignoring the negative sign.
+5.Convert the decimal into binary by dividing the decimal from 2 repeating it unless output is 1 or 0.
+6.Do normaziling by shifting number until first numbner is 1 and  ouput looks like 1.00000×2ⁿ.
+7.Exponent = moves + 127, in 8 bits.how many bits move decide the number like if we move 7 bits than 127+7.
+8.Mantissa = bits after the point, padded to 23 bits.add all zero bits at the right.
+9.Join them in  three parts like this 1-bit 8-bit 23-bit.
+10.Converting the output from step 9 by grouping  in 4 all bits then convert into hex.
+11.Show the result and the steps.
