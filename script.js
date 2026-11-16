@@ -1,9 +1,10 @@
 function toIEEE(x) {
-    // job 1: sign
     let sign = x < 0 ? "1" : "0";
-    // job 2: binary
-    // job 3: normalise
-    // job 4: exponent
-    // job 5: mantissa
-    return sign;
+    let n = Math.abs(x);
+    let bin = n.toString(2);
+    let power = bin.length - 1;
+    let fraction = bin.slice(1);
+    let exponent = (power + 127).toString(2).padStart(8, "0");
+    let mantissa = fraction.padEnd(23, "0");
+    return sign + " " + exponent + " " + mantissa;
 }
