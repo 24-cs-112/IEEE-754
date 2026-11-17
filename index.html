@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IEEE 754 Floating Point Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>IEEE 754 Converter</h1>
+        <p>32-Bit Floating Point Number Converter</p>
+    </header>
+
+    <main class="container">
+
+        <!-- Input Section -->
+        <section class="card">
+            <h2>Enter Decimal Number</h2>
+
+            <div class="input-area">
+                <input
+                    type="number"
+                    id="decimalInput"
+                    step="any"
+                    placeholder="Enter a decimal number"
+                >
+
+                <button onclick="convertNumber()">
+                    Convert
+                </button>
+            </div>
+        </section>
+
+        <!-- Result Section -->
+        <section class="card">
+            <h2>IEEE 754 Representation</h2>
+
+            <div class="bit-info">
+                <div class="bit-group">
+                    <span class="legend sign-color">Sign</span>
+                    <div class="bits" id="signBits">
+                        <span class="bit">0</span>
+                    </div>
+                    <small>1 Bit</small>
+                </div>
+
+                <div class="bit-group">
+                    <span class="legend exponent-color">Exponent</span>
+                    <div class="bits" id="exponentBits">
+                        <span class="bit">00000000</span>
+                    </div>
+                    <small>8 Bits</small>
+                </div>
+
+                <div class="bit-group">
+                    <span class="legend mantissa-color">Mantissa</span>
+                    <div class="bits" id="mantissaBits">
+                        <span class="bit">00000000000000000000000</span>
+                    </div>
+                    <small>23 Bits</small>
+                </div>
+            </div>
+
+            <div class="result-box">
+                <h3>32-Bit Binary Result</h3>
+                <p id="binaryResult">Result will appear here</p>
+            </div>
+
+            <div class="result-box">
+                <h3>Hexadecimal Result</h3>
+                <p id="hexResult">Result will appear here</p>
+            </div>
+        </section>
+
+        <!-- Conversion Steps -->
+        <section class="card">
+            <h2>Conversion Steps</h2>
+
+            <div class="steps">
+                <div class="step">
+                    <h3>Step 1: Binary Conversion</h3>
+                    <p id="step1">Binary form will appear here.</p>
+                </div>
+
+                <div class="step">
+                    <h3>Step 2: Normalization</h3>
+                    <p id="step2">Normalized form will appear here.</p>
+                </div>
+
+                <div class="step">
+                    <h3>Step 3: Exponent Calculation</h3>
+                    <p id="step3">Bias 127 calculation will appear here.</p>
+                </div>
+
+                <div class="step">
+                    <h3>Step 4: Final Result</h3>
+                    <p id="step4">Final 32-bit representation will appear here.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Special Case -->
+        <section class="card">
+            <h2>Special Case: Zero</h2>
+            <p>
+                IEEE 754 represents positive zero using 32 zero bits.
+            </p>
+            <div class="zero-result">
+                00000000000000000000000000000000
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Computer Architecture Lab Project | Group 10</p>
+        <p>Developed by Muhammad Abdul Hadi & Abdullah Mukarram</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
